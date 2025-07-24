@@ -4,21 +4,21 @@ services:
   frontend:
     build: ./Frontend
     ports:
-      - "8058:80"
+      - "9072:80"
     networks:
       - jobapp-net-new  # Changed network name
 
   hr_page:
     build: ./Hr_Page
     ports:
-      - "8059:80"
+      - "9073:80"
     networks:
       - jobapp-net-new  # Changed network name
 
   backend:
     build: ./Backend
     ports:
-      - "3431:3431"
+      - "3101:3101"
     environment:
       - DB_USER=postgres
       - DB_PASSWORD=admin123
@@ -38,7 +38,7 @@ services:
       - POSTGRES_PASSWORD=admin123
       - POSTGRES_DB=job_applications
     ports:
-      - "5431:5432"
+      - "5067:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql

@@ -17,7 +17,7 @@ COPY . .
 RUN mkdir -p Uploads
 
 # Expose the port the app runs on
-EXPOSE 3431
+EXPOSE 3101
 
 # Command to run the application
 CMD ["node", "server.js"]
