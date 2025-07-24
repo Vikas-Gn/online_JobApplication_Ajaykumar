@@ -18,7 +18,7 @@ services:
   backend:
     build: ./Backend
     ports:
-      - "3101:3101"
+      - "3401:3401"
     environment:
       - DB_USER=postgres
       - DB_PASSWORD=admin123

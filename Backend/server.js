@@ -813,6 +813,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-app.listen(PORT, '0.0.0.0', () => {
+const PORT = process.env.PORT || 3401;
+app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
